@@ -7,10 +7,11 @@ from pygame.locals import *
 from sense_hat import SenseHat
 
 
-class test():
+class test(PygameDisplay):
     
 
     def __init__(self) -> None:
+        PygameDisplay.__init__(self)
         self.font = pygame.font.Font(None, 20)
         self.sense = SenseHat()
         pass
@@ -30,6 +31,6 @@ class test():
     def quit(self):
         self.sense.clear()
 
-game = PygameDisplay(test)
+game = test()
 
 game.runngGame()

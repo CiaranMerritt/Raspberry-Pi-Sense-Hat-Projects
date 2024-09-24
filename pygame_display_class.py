@@ -6,10 +6,9 @@ class PygameDisplay(object):
     screen = pygame.display.set_mode((1280, 720))
     clock = pygame.time.Clock()
 
-    def __init__(self, game) -> None:
+    def __init__(self) -> None:
         pygame.init()
         pygame.font.init() 
-        self.game = game()
         pass
 
     def runngGame(self):
@@ -27,7 +26,7 @@ class PygameDisplay(object):
                     if event.key == K_ESCAPE:
                         running = False
 
-            self.game.run()
+            self.run()
 
             # flip() the display to put your work on screen
             pygame.display.flip()
