@@ -1,4 +1,4 @@
-from pygame_display_class import PygameDisplay
+from modules.pygame_display import PygameDisplay
 
 # Example file showing a circle moving on screen
 
